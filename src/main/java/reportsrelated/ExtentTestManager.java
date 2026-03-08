@@ -1,0 +1,16 @@
+package reportsrelated;
+
+import com.aventstack.extentreports.ExtentTest;
+
+public class ExtentTestManager {
+	
+	public static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
+
+    public static ExtentTest getTest() {
+        return test.get();
+    }
+
+    public static void setTest(ExtentTest extentTest) {
+        test.set(extentTest);
+    }
+}
